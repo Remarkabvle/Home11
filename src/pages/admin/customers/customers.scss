@@ -1,0 +1,36 @@
+.customer-list {
+    margin: 20px;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-table th,
+.customer-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.customer-item {
+    text-align: left;
+}
+
+.budget.positive {
+    color: green;
+}
+
+.budget.neutral {
+    color: orange;
+}
+
+.budget.negative {
+    color: red;
+}
