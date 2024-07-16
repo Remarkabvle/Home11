@@ -4,7 +4,7 @@ import {
     useGetCustomerByIdQuery,
     useUpdateCustomerMutation,
 } from "../../../context/api/customerApi";
-import Modal from "../../../components/modal/Modal";
+import Modal from "../../../components/model/Model";
 import PaymentForm from "../../../components/paymentForm/PaymentForm";
 import { useGetPaymentsQuery } from "../../../context/api/paymentApi";
 import "./customerDetails.scss";
