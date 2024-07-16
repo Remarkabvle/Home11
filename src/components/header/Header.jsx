@@ -1,36 +1,34 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-// import headerImg from "../../assets/images/header.png";
 import "./header.scss";
-// import Sidebar from "../sidebar/Sidebar";
 import headerIcon from "../../assets/headerIcon.svg";
 import { IoSearchSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Header = ({ title }) => {
     const [sidebar, setSidebar] = useState(false);
+
     const toggleSidebar = () => {
         setSidebar(!sidebar);
     };
+
     return (
-        <header id="header">
-            <div className="header">
-                <div className="header__left">
-                    <RxHamburgerMenu />
-                    <form action="">
-                        <IoSearchSharp />
-                        <input type="text" placeholder="search..." />
-                    </form>
-                </div>
-                <div className="header__right">
-                    {/* <Link> */}
-                    <img src={headerIcon} alt="" />
-                    {/* </Link> */}
-                    <select name="" id="">
-                        <option value="en">English</option>
-                        <option value="ru">Russia</option>
-                    </select>
-                </div>
+        <header id="header" className="header">
+            <div className="header__left">
+                <RxHamburgerMenu className="header__icon" />
+                <form action="" className="header__search-form">
+                    <IoSearchSharp className="header__search-icon" />
+                    <input type="text" className="header__search-input" placeholder="search..." />
+                </form>
+            </div>
+            <div className="header__right">
+                <Link to="/" className="header__link">
+                    <img src={headerIcon} alt="Header Icon" className="header__img" />
+                </Link>
+                <select name="language" id="language" className="header__select">
+                    <option value="en" className="header__option">English</option>
+                    <option value="ru" className="header__option">Russia</option>
+                </select>
             </div>
         </header>
     );

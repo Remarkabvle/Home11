@@ -9,8 +9,6 @@ import CreateCustomer from "./pages/admin/createCustomer/CreateCustomer";
 import CustomerDetail from "./pages/admin/customerDetail/CustomerDetail";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <>
             <Routes>

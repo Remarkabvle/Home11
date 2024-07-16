@@ -1,0 +1,50 @@
+#header, .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  z-index: 9;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__left svg {
+  font-size: 24px;
+}
+.header__left form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  border-radius: 30px;
+  padding: 8px 10px;
+  border: 1px solid #d5d5d5;
+}
+.header__left form input {
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__right select {
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid #d5d4d5;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=header.css.map */

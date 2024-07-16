@@ -22,12 +22,14 @@ const CreatePayment = ({ id, setPayment }) => {
         createPayment(cusPay);
         setPayment(false);
     };
+
     return (
         <div>
-            <form action="" onSubmit={handlePaySubmit}>
-                <h2>Payment</h2>
+            <form className="payment-form" onSubmit={handlePaySubmit}>
+                <h2 className="payment-form-title">Payment</h2>
                 <input
                     type="number"
+                    className="payment-form-input"
                     placeholder="amount"
                     name="amount"
                     value={cusPay.amount}
@@ -35,12 +37,13 @@ const CreatePayment = ({ id, setPayment }) => {
                 />
                 <input
                     type="text"
+                    className="payment-form-input"
                     placeholder="comment"
                     name="comment"
                     value={cusPay.comment}
                     onChange={handleChange}
                 />
-                <button> Save</button>
+                <button className="payment-form-button">Save</button>
             </form>
         </div>
     );

@@ -1,16 +1,15 @@
 import React from "react";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IoCube } from "react-icons/io5";
-import { FaChartPie } from "react-icons/fa";
-import { FaTicket } from "react-icons/fa6";
-import { FaLightbulb } from "react-icons/fa";
+import { FaChartPie, FaTicket, FaLightbulb } from "react-icons/fa";
 import { RxExit } from "react-icons/rx";
-import "./sidebar.scss";
+import "./sidebar.scss"; 
 
 const Sidebar = () => {
     let navigate = useNavigate();
+
     const handleLogout = () => {
-        if (confirm("Aru you sure?")) {
+        if (window.confirm("Are you sure?")) { 
             localStorage.clear();
             navigate("/");
         }
@@ -24,7 +23,7 @@ const Sidebar = () => {
             </div>
             <ul className="sidebar__collection">
                 <li className="sidebar__item">
-                    <NavLink className={"sidebar__link"} to={"customers"}>
+                    <NavLink className="sidebar__link" to="/customers">
                         <span>
                             <FaChartPie />
                             Customers
@@ -32,7 +31,7 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
                 <li className="sidebar__item">
-                    <NavLink className={"sidebar__link"} to={"seller"}>
+                    <NavLink className="sidebar__link" to="/seller">
                         <span>
                             <FaTicket />
                             Seller
@@ -40,7 +39,7 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
                 <li className="sidebar__item">
-                    <NavLink className={"sidebar__link"} to={"shop"}>
+                    <NavLink className="sidebar__link" to="/shop">
                         <span>
                             <FaLightbulb />
                             Shop
@@ -48,7 +47,7 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
                 <li className="sidebar__item">
-                    <NavLink className={"sidebar__link"} to={"createCustomer"}>
+                    <NavLink className="sidebar__link" to="/createCustomer">
                         <span>
                             <FaLightbulb />
                             Create
